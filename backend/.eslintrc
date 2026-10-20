@@ -1,0 +1,23 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-base",
+    "eslint:recommended"
+  ],
+  "rules": {
+    "linebreak-style": "off",
+    "import/newline-after-import": "off",
+    "prefer-template": "off",
+    "indent": "off",
+    "consistent-return": "off",
+    "camelcase": "off",
+    "no-underscore-dangle": "off",
+    "no-console": "off",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    "no-trailing-spaces": "off",
+    "max-len": ["error", { "code": 125 }]   
+  }
+}

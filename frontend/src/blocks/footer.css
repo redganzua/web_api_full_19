@@ -1,0 +1,28 @@
+.footer {
+  display: flex;
+  width: 880px;
+  height: 70px;
+}
+
+.footer__text {
+  margin: 0;
+  font-size: 18px;
+  color: #545454;
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 880px) {
+  .footer {
+    width: 560px;
+  }
+
+  .footer__text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .footer {
+    width: 100%;
+  }
+}
