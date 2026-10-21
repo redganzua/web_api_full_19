@@ -31,6 +31,13 @@ app.use(express.json());
 // Registro de solicitudes (debe ir antes de todas las rutas)
 app.use(requestLogger);
 
+// Ruta temporal para la revisión del código: hace caer el servidor para probar PM2. ELIMINAR después de la revisión.
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('El servidor va a caer');
+  }, 0);
+});
+
 // Rutas públicas (no requieren autorización)
 app.post('/signin', validateSignin, login);
 app.post('/signup', validateSignup, createUser);
