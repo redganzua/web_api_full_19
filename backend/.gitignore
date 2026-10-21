@@ -13,3 +13,6 @@ node_modules
 .DS_Store
 .idea
 .vscode
+
+# Variables de entorno (solo viven en el servidor)
+.env

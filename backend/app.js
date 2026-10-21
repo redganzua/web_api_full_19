@@ -1,3 +1,6 @@
+// Carga las variables del archivo .env (si no existe, no pasa nada). Debe ser lo primero.
+require('dotenv').config({ path: require('path').join(__dirname, '.env') });
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
