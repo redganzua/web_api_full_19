@@ -17,9 +17,9 @@ router.get('/me', getCurrentUser);
 router.get('/:id', validateId, getUser);
 
 // Actualizamos el 'name' y 'about' del User
-router.patch('/me', validateProfile, updateUserProfile);// Nota mental: Modificamos la autenticación temporal para no requeriri un "/:id" de momento.
+router.patch('/me', validateProfile, updateUserProfile);
 
 // Actualizamos el 'avatar' del usuario
-router.patch('/me/avatar', validateAvatar, updateUserAvatar);// Nota mental: Modificamos la autenticación temporal para no requeriri un "/:id" de momento.
+router.patch('/me/avatar', validateAvatar, updateUserAvatar);
 
 module.exports = router;
