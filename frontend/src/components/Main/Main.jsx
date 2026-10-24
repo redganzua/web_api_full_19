@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useEffect, useContext } from 'react'
 import Popup from './popup/Popup';
 import NewCard from './components/popup/NewCard/NewCard';
@@ -21,7 +20,7 @@ const Main = ({ onUpdateUser, onUpdateAvatar }) => {
     function handleOpenPopup(popup){
       setActivePopup(popup);
     }
-    function handleClosePopup(popup){
+    function handleClosePopup(){
       setActivePopup(null);
     }
 

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import { useState, useContext } from 'react'
 import CurrentUserContext from '../../../../../contexts/CurrentUserContext';
 
 const EditProfile = ({ onClose, onSubmit }) => {

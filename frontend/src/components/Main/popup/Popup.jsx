@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Popup = ({ onClose, title, children__form_content, isImage }) => {
   return (

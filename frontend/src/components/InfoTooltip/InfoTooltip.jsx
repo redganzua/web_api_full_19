@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 /**
  * Modal que informa el resultado del registro (éxito o error).

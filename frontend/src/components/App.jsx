@@ -26,7 +26,8 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [userEmail, setUserEmail] = useState('');
   //Evita parpadeos de redirección mientras se valida el token guardado
-  const [isCheckingToken, setIsCheckingToken] = useState(true);
+  //Si no hay token guardado, no hay nada que validar, así que arranca en false
+  const [isCheckingToken, setIsCheckingToken] = useState(Boolean(token));
 
   //Guarda o borra el token en el estado, en localStorage y en la instancia de la API
   const saveToken = useCallback((newToken) => {
@@ -41,10 +42,7 @@ function App() {
 
   //Al montar la app, valida si hay un token guardado en localStorage
   useEffect(() => {
-    if (!token) {
-      setIsCheckingToken(false);
-      return;
-    }
+    if (!token) return;
 
     //La API necesita el token antes de que los componentes hijos hagan solicitudes
     api.setToken(token);

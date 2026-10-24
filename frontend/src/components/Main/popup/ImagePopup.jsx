@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const ImagePopup = ({ card }) => {
   const { name, link } = card;
